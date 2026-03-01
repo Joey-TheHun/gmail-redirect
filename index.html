@@ -19,9 +19,8 @@
   <script>
     var params = new URLSearchParams(window.location.search);
     var mid = params.get('mid');
-    var account = params.get('account') || 'info@joyprint.com.au';
     if (mid) {
-      window.location.href = 'https://mail.google.com/mail/u/' + account + '/#all/' + mid;
+      window.location.replace('https://mail.google.com/mail/#all/' + mid);
     } else {
       document.querySelector('.box').innerHTML = '<h2>Missing ?mid= parameter</h2><p>Usage: ?mid=MESSAGE_ID</p>';
     }
